@@ -9,11 +9,24 @@
 
 <body>
     <nav>
-        <a href="/">Home</a>
-        <a href="/about">Sobre</a>
-        <a href="/contato">Contact</a>
-        <a href="/404">404</a>
+        <a href="/" onclick="route()">Home</a>
+        <a href="/about" onclick="route()">Sobre</a>
+        <a href="/contato" onclick="route()">Contact</a>
+        <a href="/404" onclick="route()">404</a>
+
+        <div id="app"> </div>
     </nav>
+
+    <script>
+        function route(event) {
+
+            event = event || window.event
+            event.preventDefault()
+        }
+
+
+    </script>
+
 </body>
 
 </html>
