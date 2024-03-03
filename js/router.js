@@ -1,6 +1,7 @@
 
+export class Router {
 
-class Router {
+    routes = {}
 
     add(routeName, page) {
 
@@ -33,4 +34,4 @@ class Router {
 
 }
 
-const router = new Router()
+export default new Router()
