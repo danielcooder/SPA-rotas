@@ -1,15 +1,11 @@
-
 export class Router {
-
     routes = {}
 
     add(routeName, page) {
-
         this.routes[routeName] = page
     }
 
     route(event) {
-
         event = event || window.event
         event.preventDefault()
 
@@ -19,12 +15,8 @@ export class Router {
     }
 
     handle() {
-
         const { pathname } = window.location
         const route = this.routes[pathname] || this.routes[404]
-
-        console.log('antes do fecht')
-
         fetch(route)
             .then(data => data.text())
             .then(html => {
@@ -33,5 +25,3 @@ export class Router {
     }
 
 }
-
-export default new Router()
